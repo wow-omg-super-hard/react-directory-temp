@@ -4,11 +4,14 @@
   "description": "{{ appDescription }}",
   "main": "index.js",
   "scripts": {
-    "dev": "",
+    "dev": "webpack-dev-server --inline --hot scripts/webpack.dev.js",
     "build": "",
     "start": "npm run dev"
   },
   "keywords": [],
   "author": "{{ appAuthor }}",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.9.1"
+  }
 }

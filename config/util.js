@@ -1,16 +1,15 @@
 var path = require('path');
 
 export.getStyleLoaders = function (cssOptions) {
-    var loaders = [
-        'style-loader',
-        {
+    var loader = {
+        fallback: 'style-loader',
+        use: [{
             loader: 'css-loader',
-            options: Object.assign({
-                modules: true,
-                localIdentName: '[name]__[contenthash:base64:6].css'
-            }, cssOptions)
-        }
-    ];
+            options: cssOptions
+        }]
+    };
+
+    return loader;
 };
 
 export.getResolves = function (extensions, alias) {

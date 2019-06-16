@@ -16,8 +16,8 @@ module.exports = {
         // Path
         assertRoot: getRoot('dist'),    // 打包的目录
         assertFilename: '[name].[chunkhash].js', // 打包的资源文件名
-        assertStaticRoot: getRoot('dist', 'statics'), // 打包的css、font、image后的目录
-        assertChunkFilename: '[name].[chunkhash].js', // 生成的children chunk
+        assertStaticName: 'statics', // 打包的css、font、image后的目录
+        assertChunkFilename: '[name].[chunkhash].js', // 生成的children chunk，通过Code Split产生的chunk
 
         // Resolve
         resolve: util.getResolves, // 默认后缀名，设置开发根目录快捷方式，方便开发时引用
