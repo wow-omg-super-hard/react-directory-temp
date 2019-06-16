@@ -4,7 +4,9 @@
   "description": "{{ appDescription }}",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "",
+    "build": "",
+    "start": "npm run dev"
   },
   "keywords": [],
   "author": "{{ appAuthor }}",
