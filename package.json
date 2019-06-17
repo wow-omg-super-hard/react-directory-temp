@@ -11,7 +11,8 @@
   "keywords": [],
   "author": "{{ appAuthor }}",
   "license": "ISC",
-  "dependencies": {
-    "underscore": "^1.9.1"
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-merge": "^4.2.1"
   }
 }
