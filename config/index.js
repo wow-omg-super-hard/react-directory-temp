@@ -44,6 +44,6 @@ module.exports = {
     prod: {
         // 一般用cdn
         assertPublicRoot: '/',
-        devtool: '#cheap-module-source-map'
+        devtool: '#cheap-module-source-map',
     }
 };

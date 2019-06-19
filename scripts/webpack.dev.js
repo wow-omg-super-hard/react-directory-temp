@@ -23,7 +23,7 @@ module.exports = merge(baseConfig, {
             exclude: /node_modules/
         }, {
             // 处理引用node_modules的直接用loader进行编译打包就行
-            test: /\.css/,
+            test: /\.css/i,
             use: ExtractTextPlugin.extract(getPublicConfig('styleLoaders')),
             include: /node_modules/
         }]

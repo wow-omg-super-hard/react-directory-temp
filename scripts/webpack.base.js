@@ -43,24 +43,10 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     limit: 8192, // 小于8m的图片都转成base64
-                    publicPath: '/', // 显示的图片地址根目录
-                    outputPath: getPublicConfig('assertStaticRoot'), // 打包的图片目录
+                    outputPath: path.join(getPublicConfig('assertStaticRoot'), '/'), // 打包的图片目录
                     name: '[name].[ext]' // 打包后的文件名，在css文件中或img.src中会根据output.publicPath或options.publicPath + name生成最终的文件名
                 }
             }
-        }, {
-            // 引用node_modules等第三方库时候，是不需要进行Css Modules的
-            test: /\.css/i,
-            use: ExtractTextPlugin.extract(getPublicConfig('styleLoaders'), {
-                modules: true,
-                localIdentName: '[name]__[contenthash:base64:6]'
-            }),
-            exclude: /node_modules/i
-        }, {
-            // 处理引用node_modules的直接用loader进行编译打包就行
-            test: /\.css/i,
-            use: ExtractTextPlugin.extract(getPublicConfig('styleLoaders')),
-            include: /node_modules/i
         }]
     },
 
