@@ -43,7 +43,9 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     limit: 8192, // 小于8m的图片都转成base64
-                    name: path.join(getPublicConfig('assertStaticRoot'), '[name].js'), // 生成图片和font的路径，相当于抽取出图片和font
+                    publicPath: '/', // 显示的图片地址根目录
+                    outputPath: getPublicConfig('assertStaticRoot'), // 打包的图片目录
+                    name: '[name].[ext]' // 打包后的文件名，在css文件中或img.src中会根据output.publicPath或options.publicPath + name生成最终的文件名
                 }
             }
         }, {
