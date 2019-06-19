@@ -42,7 +42,7 @@ module.exports = {
             use: {
                 loader: 'url-loader',
                 options: {
-                    limit: 8192, //小于8m的图片都转成base65
+                    limit: 8192, // 小于8m的图片都转成base64
                     name: path.join(getPublicConfig('assertStaticRoot'), '[name].js'), // 生成图片和font的路径，相当于抽取出图片和font
                 }
             }
