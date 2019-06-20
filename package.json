@@ -11,8 +11,27 @@
   "keywords": [],
   "author": "{{ appAuthor }}",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-router": "^5.0.1"
+  },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^2.0.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.11.5",
     "webpack-merge": "^4.2.1"
   }
 }
