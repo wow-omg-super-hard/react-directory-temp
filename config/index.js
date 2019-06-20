@@ -2,7 +2,7 @@ var path = require('path');
 var util = require('./util');
 
 function getRoot () {
-    var args = Array.prototype.concat.apply([], '..', arguments);
+    var args = Array.prototype.concat.apply([], arguments);
 
     return path.resolve.apply(path, args);
 }

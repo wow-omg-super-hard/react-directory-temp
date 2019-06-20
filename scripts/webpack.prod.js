@@ -6,8 +6,7 @@ var webpack = require('webpack'),
     CleanPlugin = require('clean-webpack-plugin'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var packageConfig = require('../package'),
-    config = require('../config'),
+var config = require('../config'),
     util = require('./util'),
     baseConfig = require('./webpack.base');
 

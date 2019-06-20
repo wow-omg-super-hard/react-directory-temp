@@ -1,4 +1,6 @@
-export.getOwnProperty = function (obj) {
+var packageConfig = require('../package');
+
+exports.getOwnProperty = function (obj) {
     return function (prop) {
         var args = Array.prototype.slice.call(arguments),
             prop = args.shift();
@@ -11,6 +13,6 @@ export.getOwnProperty = function (obj) {
     };
 }
 
-export.getDepMods = function () {
+exports.getDepMods = function () {
     return Object.keys(packageConfig.dependencies);
 }

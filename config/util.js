@@ -1,6 +1,6 @@
 var path = require('path');
 
-export.getStyleLoaders = function (cssOptions) {
+exports.getStyleLoaders = function (cssOptions) {
     var loader = {
         fallback: 'style-loader',
         use: [{
@@ -12,7 +12,7 @@ export.getStyleLoaders = function (cssOptions) {
     return loader;
 };
 
-export.getResolves = function (extensions, alias) {
+exports.getResolves = function (extensions, alias) {
     extensions = (extensions || []).concat([ '.js', '.json', '.css', '.less' ]);
     alias = Object.assign({ '@': path.resolve('..', 'src') }, alias || {});
 

@@ -2,6 +2,7 @@ var merge = require('webpack-merge'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var util = require('./util'),
+    config = require('../config'),
     baseConfig = require('./webpack.base');
 
 var getPublicConfig = util.getOwnProperty(config.public),
