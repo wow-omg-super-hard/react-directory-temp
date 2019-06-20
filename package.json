@@ -4,7 +4,7 @@
   "description": "{{ appDescription }}",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot scripts/webpack.dev.js",
+    "dev": "webpack-dev-server --inline --hot --config scripts/webpack.dev.js",
     "build": "",
     "start": "npm run dev"
   },
